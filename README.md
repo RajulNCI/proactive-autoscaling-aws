@@ -109,7 +109,7 @@ Both evaluated under identical Apache JMeter 2-hour load test
 ```
 proactive-autoscaling-aws/
 ├── README.md                        ← This file
-├── MainML.py                        ← Complete ML pipeline
+├── rf_proactive_autoscaler.py       ← Complete ML pipeline
 ├── requirements.txt                 ← Dependencies
 └── results/
     └── preliminary_results.txt      ← Actual terminal output
