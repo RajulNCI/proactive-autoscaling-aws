@@ -45,7 +45,7 @@ Trained on 3,000 synthetic workload data points modelled on Google Cluster Trace
 pip install scikit-learn pandas numpy
 
 # Run the pipeline
-python MainML.py
+python rf_proactive_autoscaler.py
 ```
 
 No external dataset download needed — workload data is generated synthetically inside the script.
