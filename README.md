@@ -125,7 +125,6 @@ Key references:
 - Dogani et al. (2023) — Auto-scaling taxonomy survey, Computer Communications
 - Khaleq & Ra (2024) — Cloud autoscaling problems, Sensors
 - Zhang et al. (2020) — ML cloud resource management survey, IEEE Access
-- Google Cluster Traces v3 — https://github.com/google/cluster-data
 
 ---
 
