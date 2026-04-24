@@ -1,0 +1,43 @@
+================================================
+ML-Based Proactive Autoscaling — Preliminary Results
+Rajul Dixit | X24197483 | NCI MSc Cloud Computing
+================================================
+
+Generating realistic cluster workload dataset...
+Dataset generated: 15,000 rows
+
+--- PREPROCESSING ---
+After resampling: 3,000
+
+--- FEATURE ENGINEERING ---
+Target variable: CPU utilisation at t+2 (10 minutes ahead)
+Features: lag_1, lag_2, lag_3, lag_6, lag_12, roll_mean_5, roll_std_10, roll_max_5
+
+--- TRAINING MODEL ---
+Model: RandomForestRegressor(n_estimators=150, max_depth=15, random_state=42)
+Train samples: 2,400 (80%)
+Test samples:  600 (20%)
+Split type: Chronological (no shuffling — temporal integrity preserved)
+
+================ RESULTS ================
+MAE  : 0.0352
+RMSE : 0.0454
+R2   : 0.9531
+
+--- FEATURE IMPORTANCE ---
+roll_mean_5     0.961
+roll_std_10     0.007
+lag_6           0.006
+lag_12          0.006
+lag_2           0.006
+lag_1           0.005
+lag_3           0.005
+roll_max_5      0.004
+
+--- AUTOSCALING SIMULATION ---
+Threshold: 0.70 (normalised CPU)
+Actual SLA violations : 54
+Proactive triggers    : 25
+Coverage              : 46.3% of violations anticipated before breach
+
+DONE ✔ Pipeline working successfully
